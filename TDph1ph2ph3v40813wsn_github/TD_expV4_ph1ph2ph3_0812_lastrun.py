@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on 六  8/13 00:01:08 2022
+    on 六  8/13 20:41:56 2022
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -179,7 +179,7 @@ image_phase1intro = visual.ImageStim(
     win=win,
     name='image_phase1intro', 
     image='img/img_instruction/ph1intro.png', mask=None,
-    ori=0.0, pos=(0, 0), size=(1.2,1),
+    ori=0.0, pos=(0, -0.1), size=(1.2,1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -252,7 +252,7 @@ image_phase2intro = visual.ImageStim(
     win=win,
     name='image_phase2intro', 
     image='img/img_instruction/ph2intro.png', mask=None,
-    ori=0.0, pos=(0, 0.15), size=(1.2, 1),
+    ori=0.0, pos=(0, 0.1), size=(1.2, 0.7),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -260,8 +260,8 @@ key_resp_5 = keyboard.Keyboard()
 image_12 = visual.ImageStim(
     win=win,
     name='image_12', 
-    image='img/img_axis/ax1.png', mask=None,
-    ori=0.0, pos=(0, -0.1), size=(0.2, 0.7),
+    image='img/img_axis/ax5.png', mask=None,
+    ori=0.0, pos=(0, -0.1), size=(0.15, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-2.0)
@@ -284,6 +284,14 @@ list_1_remove = []
 list_2_remove = []
 list_3_remove = []
 list_4_remove = []
+image_phase2instru = visual.ImageStim(
+    win=win,
+    name='image_phase2instru', 
+    image='img/img_instruction/ph2.png', mask=None,
+    ori=0.0, pos=(0, 0.1), size=(1.5, 0.9),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-1.0)
 image_ax1 = visual.ImageStim(
     win=win,
     name='image_ax1', 
@@ -291,7 +299,7 @@ image_ax1 = visual.ImageStim(
     ori=0.0, pos=[0,0], size=(0.2, 0.7),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 image_ax2 = visual.ImageStim(
     win=win,
     name='image_ax2', 
@@ -299,7 +307,7 @@ image_ax2 = visual.ImageStim(
     ori=0.0, pos=[0,0], size=(0.2, 0.7),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-3.0)
 image_ax3 = visual.ImageStim(
     win=win,
     name='image_ax3', 
@@ -307,7 +315,7 @@ image_ax3 = visual.ImageStim(
     ori=0.0, pos=[0,0], size=(0.2, 0.7),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 image_ax4 = visual.ImageStim(
     win=win,
     name='image_ax4', 
@@ -315,7 +323,7 @@ image_ax4 = visual.ImageStim(
     ori=0.0, pos=[0,0], size=(0.2, 0.7),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-4.0)
+    texRes=128.0, interpolate=True, depth=-5.0)
 image_buttonA = visual.ImageStim(
     win=win,
     name='image_buttonA', 
@@ -323,7 +331,7 @@ image_buttonA = visual.ImageStim(
     ori=0.0, pos=(-0.35, -0.4), size=(0.18, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-5.0)
+    texRes=128.0, interpolate=True, depth=-6.0)
 image_buttonB = visual.ImageStim(
     win=win,
     name='image_buttonB', 
@@ -331,7 +339,7 @@ image_buttonB = visual.ImageStim(
     ori=0.0, pos=(-0.05, -0.4), size=(0.18, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-6.0)
+    texRes=128.0, interpolate=True, depth=-7.0)
 image_buttonC = visual.ImageStim(
     win=win,
     name='image_buttonC', 
@@ -339,7 +347,7 @@ image_buttonC = visual.ImageStim(
     ori=0.0, pos=(0.25, -0.4), size=(0.18, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-7.0)
+    texRes=128.0, interpolate=True, depth=-8.0)
 image_buttonD = visual.ImageStim(
     win=win,
     name='image_buttonD', 
@@ -347,7 +355,7 @@ image_buttonD = visual.ImageStim(
     ori=0.0, pos=(0.55, -0.4), size=(0.18, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-8.0)
+    texRes=128.0, interpolate=True, depth=-9.0)
 image_personpic = visual.ImageStim(
     win=win,
     name='image_personpic', 
@@ -355,7 +363,7 @@ image_personpic = visual.ImageStim(
     ori=0.0, pos=(-0.6, 0), size=(0.2, 0.2),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-9.0)
+    texRes=128.0, interpolate=True, depth=-10.0)
 mouse_A = event.Mouse(win=win)
 x, y = [None, None]
 mouse_A.mouseClock = core.Clock()
@@ -374,7 +382,7 @@ text_personname = visual.TextStim(win=win, name='text_personname',
     pos=(-0.6, -0.1), height=0.05, wrapWidth=None, ori=0.0, 
     color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-14.0);
+    depth=-15.0);
 image_ph2axisnow1 = visual.ImageStim(
     win=win,
     name='image_ph2axisnow1', 
@@ -382,7 +390,7 @@ image_ph2axisnow1 = visual.ImageStim(
     ori=0.0, pos=(-0.338, -0.31), size=(0.09, 0.055),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-15.0)
+    texRes=128.0, interpolate=True, depth=-16.0)
 image_ph2axisnow2 = visual.ImageStim(
     win=win,
     name='image_ph2axisnow2', 
@@ -390,7 +398,7 @@ image_ph2axisnow2 = visual.ImageStim(
     ori=0.0, pos=(-0.038, -0.31), size=(0.09, 0.055),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-16.0)
+    texRes=128.0, interpolate=True, depth=-17.0)
 image_ph2axisnow3 = visual.ImageStim(
     win=win,
     name='image_ph2axisnow3', 
@@ -398,7 +406,7 @@ image_ph2axisnow3 = visual.ImageStim(
     ori=0.0, pos=(0.262, -0.31), size=(0.09, 0.055),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-17.0)
+    texRes=128.0, interpolate=True, depth=-18.0)
 image_ph2axisnow4 = visual.ImageStim(
     win=win,
     name='image_ph2axisnow4', 
@@ -406,7 +414,66 @@ image_ph2axisnow4 = visual.ImageStim(
     ori=0.0, pos=(0.562, -0.31), size=(0.09, 0.055),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-18.0)
+    texRes=128.0, interpolate=True, depth=-19.0)
+
+# Initialize components for Routine "waiting_phase2"
+waiting_phase2Clock = core.Clock()
+text_9 = visual.TextStim(win=win, name='text_9',
+    text='',
+    font='Open Sans',
+    pos=(-0.2, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+text_10 = visual.TextStim(win=win, name='text_10',
+    text='',
+    font='Open Sans',
+    pos=(-0.2, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+text_12 = visual.TextStim(win=win, name='text_12',
+    text='',
+    font='Open Sans',
+    pos=(-0.2, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+text_13 = visual.TextStim(win=win, name='text_13',
+    text='',
+    font='Open Sans',
+    pos=(-0.2, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+image_14 = visual.ImageStim(
+    win=win,
+    name='image_14', 
+    image='img/img_instruction/waiting_phase2a.png', mask=None,
+    ori=0.0, pos=(0, 0.2), size=(1, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-4.0)
+image_15 = visual.ImageStim(
+    win=win,
+    name='image_15', 
+    image='img/img_instruction/waiting_phase2b.png', mask=None,
+    ori=0.0, pos=(0, -0.15), size=(1.7, 0.68),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-5.0)
+
+# Initialize components for Routine "waiting_phase_2next"
+waiting_phase_2nextClock = core.Clock()
+image_13 = visual.ImageStim(
+    win=win,
+    name='image_13', 
+    image='img/img_instruction/waiting_phase2next.png', mask=None,
+    ori=0.0, pos=(0, 0), size=(1, 0.3),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=0.0)
+key_resp_8 = keyboard.Keyboard()
 
 # Initialize components for Routine "phase3intro"
 phase3introClock = core.Clock()
@@ -446,7 +513,7 @@ image_practiceaxis1 = visual.ImageStim(
     win=win,
     name='image_practiceaxis1', 
     image='img/img_axis/ax27.png', mask=None,
-    ori=0.0, pos=(-0.2, 0), size=(0.2, 0.7),
+    ori=0.0, pos=(-0.2, 0), size=(0.2, 0.67),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-4.0)
@@ -454,7 +521,7 @@ image_practiceaxis2 = visual.ImageStim(
     win=win,
     name='image_practiceaxis2', 
     image='img/img_axis/ax36.png', mask=None,
-    ori=0.0, pos=(0.2, 0), size=(0.2, 0.7),
+    ori=0.0, pos=(0.2, 0), size=(0.2, 0.67),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-5.0)
@@ -462,7 +529,7 @@ image_11 = visual.ImageStim(
     win=win,
     name='image_11', 
     image='img/img_instruction/ph3_practiceinstr.png', mask=None,
-    ori=0.0, pos=(0, 0.3), size=(1, 0.5),
+    ori=0.0, pos=(0, 0.29), size=(0.8, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-6.0)
@@ -496,7 +563,7 @@ image_9 = visual.ImageStim(
     win=win,
     name='image_9', 
     image='img/img_instruction/ph3_formalinstr.png', mask=None,
-    ori=0.0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0.0, pos=(0, 0), size=(1.2, 0.65),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
@@ -518,7 +585,7 @@ image_ph3Q = visual.ImageStim(
     win=win,
     name='image_ph3Q', 
     image='img/img_instruction/ph3.png', mask=None,
-    ori=0.0, pos=(0, 0.2), size=(1, 0.6),
+    ori=0.0, pos=(0, 0.27), size=(0.9, 0.54),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
@@ -611,8 +678,8 @@ image_5 = visual.ImageStim(
 # Initialize components for Routine "stop"
 stopClock = core.Clock()
 text_stop = visual.TextStim(win=win, name='text_stop',
-    text='thanks',
-    font='Open Sans',
+    text='本实验到此结束，感谢参与！',
+    font='STSong',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
     color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -1650,7 +1717,7 @@ for thisTrial in trials:
     gotValidClick = False  # until a click is received
     text_personname.setText(person_name)
     # keep track of which components have finished
-    Phase2Components = [image_ax1, image_ax2, image_ax3, image_ax4, image_buttonA, image_buttonB, image_buttonC, image_buttonD, image_personpic, mouse_A, mouse_B, mouse_C, mouse_D, text_personname, image_ph2axisnow1, image_ph2axisnow2, image_ph2axisnow3, image_ph2axisnow4]
+    Phase2Components = [image_phase2instru, image_ax1, image_ax2, image_ax3, image_ax4, image_buttonA, image_buttonB, image_buttonC, image_buttonD, image_personpic, mouse_A, mouse_B, mouse_C, mouse_D, text_personname, image_ph2axisnow1, image_ph2axisnow2, image_ph2axisnow3, image_ph2axisnow4]
     for thisComponent in Phase2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1672,6 +1739,15 @@ for thisTrial in trials:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *image_phase2instru* updates
+        if image_phase2instru.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image_phase2instru.frameNStart = frameN  # exact frame index
+            image_phase2instru.tStart = t  # local t and not account for scr refresh
+            image_phase2instru.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_phase2instru, 'tStartRefresh')  # time at next scr refresh
+            image_phase2instru.setAutoDraw(True)
         
         # *image_ax1* updates
         if image_ax1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1976,6 +2052,8 @@ for thisTrial in trials:
     print(loc_x_4)
     
     
+    trials.addData('image_phase2instru.started', image_phase2instru.tStartRefresh)
+    trials.addData('image_phase2instru.stopped', image_phase2instru.tStopRefresh)
     trials.addData('image_ax1.started', image_ax1.tStartRefresh)
     trials.addData('image_ax1.stopped', image_ax1.tStopRefresh)
     trials.addData('image_ax2.started', image_ax2.tStartRefresh)
@@ -2106,6 +2184,293 @@ for thisTrial in trials:
     
 # completed 1.0 repeats of 'trials'
 
+
+# set up handler to look after randomisation of conditions etc
+trials_5 = data.TrialHandler(nReps=1.0, method='sequential', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('cond/waiting_p2.xlsx'),
+    seed=None, name='trials_5')
+thisExp.addLoop(trials_5)  # add the loop to the experiment
+thisTrial_5 = trials_5.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial_5.rgb)
+if thisTrial_5 != None:
+    for paramName in thisTrial_5:
+        exec('{} = thisTrial_5[paramName]'.format(paramName))
+
+for thisTrial_5 in trials_5:
+    currentLoop = trials_5
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_5.rgb)
+    if thisTrial_5 != None:
+        for paramName in thisTrial_5:
+            exec('{} = thisTrial_5[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "waiting_phase2"-------
+    continueRoutine = True
+    routineTimer.add(4.500000)
+    # update component parameters for each repeat
+    text_9.setText(person_num1)
+    text_10.setText(person_num2)
+    text_12.setText(person_num3)
+    text_13.setText(person_num4)
+    # keep track of which components have finished
+    waiting_phase2Components = [text_9, text_10, text_12, text_13, image_14, image_15]
+    for thisComponent in waiting_phase2Components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    waiting_phase2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "waiting_phase2"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = waiting_phase2Clock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=waiting_phase2Clock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_9* updates
+        if text_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_9.frameNStart = frameN  # exact frame index
+            text_9.tStart = t  # local t and not account for scr refresh
+            text_9.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_9, 'tStartRefresh')  # time at next scr refresh
+            text_9.setAutoDraw(True)
+        if text_9.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_9.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                text_9.tStop = t  # not accounting for scr refresh
+                text_9.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_9, 'tStopRefresh')  # time at next scr refresh
+                text_9.setAutoDraw(False)
+        
+        # *text_10* updates
+        if text_10.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            text_10.frameNStart = frameN  # exact frame index
+            text_10.tStart = t  # local t and not account for scr refresh
+            text_10.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_10, 'tStartRefresh')  # time at next scr refresh
+            text_10.setAutoDraw(True)
+        if text_10.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_10.tStartRefresh + 1.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_10.tStop = t  # not accounting for scr refresh
+                text_10.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_10, 'tStopRefresh')  # time at next scr refresh
+                text_10.setAutoDraw(False)
+        
+        # *text_12* updates
+        if text_12.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
+            # keep track of start time/frame for later
+            text_12.frameNStart = frameN  # exact frame index
+            text_12.tStart = t  # local t and not account for scr refresh
+            text_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_12, 'tStartRefresh')  # time at next scr refresh
+            text_12.setAutoDraw(True)
+        if text_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_12.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_12.tStop = t  # not accounting for scr refresh
+                text_12.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_12, 'tStopRefresh')  # time at next scr refresh
+                text_12.setAutoDraw(False)
+        
+        # *text_13* updates
+        if text_13.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+            # keep track of start time/frame for later
+            text_13.frameNStart = frameN  # exact frame index
+            text_13.tStart = t  # local t and not account for scr refresh
+            text_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_13, 'tStartRefresh')  # time at next scr refresh
+            text_13.setAutoDraw(True)
+        if text_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_13.tStartRefresh + 1.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_13.tStop = t  # not accounting for scr refresh
+                text_13.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_13, 'tStopRefresh')  # time at next scr refresh
+                text_13.setAutoDraw(False)
+        
+        # *image_14* updates
+        if image_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image_14.frameNStart = frameN  # exact frame index
+            image_14.tStart = t  # local t and not account for scr refresh
+            image_14.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_14, 'tStartRefresh')  # time at next scr refresh
+            image_14.setAutoDraw(True)
+        if image_14.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image_14.tStartRefresh + 4.5-frameTolerance:
+                # keep track of stop time/frame for later
+                image_14.tStop = t  # not accounting for scr refresh
+                image_14.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image_14, 'tStopRefresh')  # time at next scr refresh
+                image_14.setAutoDraw(False)
+        
+        # *image_15* updates
+        if image_15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image_15.frameNStart = frameN  # exact frame index
+            image_15.tStart = t  # local t and not account for scr refresh
+            image_15.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_15, 'tStartRefresh')  # time at next scr refresh
+            image_15.setAutoDraw(True)
+        if image_15.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image_15.tStartRefresh + 4.5-frameTolerance:
+                # keep track of stop time/frame for later
+                image_15.tStop = t  # not accounting for scr refresh
+                image_15.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image_15, 'tStopRefresh')  # time at next scr refresh
+                image_15.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in waiting_phase2Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "waiting_phase2"-------
+    for thisComponent in waiting_phase2Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_5.addData('text_9.started', text_9.tStartRefresh)
+    trials_5.addData('text_9.stopped', text_9.tStopRefresh)
+    trials_5.addData('text_10.started', text_10.tStartRefresh)
+    trials_5.addData('text_10.stopped', text_10.tStopRefresh)
+    trials_5.addData('text_12.started', text_12.tStartRefresh)
+    trials_5.addData('text_12.stopped', text_12.tStopRefresh)
+    trials_5.addData('text_13.started', text_13.tStartRefresh)
+    trials_5.addData('text_13.stopped', text_13.tStopRefresh)
+    trials_5.addData('image_14.started', image_14.tStartRefresh)
+    trials_5.addData('image_14.stopped', image_14.tStopRefresh)
+    trials_5.addData('image_15.started', image_15.tStartRefresh)
+    trials_5.addData('image_15.stopped', image_15.tStopRefresh)
+    thisExp.nextEntry()
+    
+# completed 1.0 repeats of 'trials_5'
+
+
+# ------Prepare to start Routine "waiting_phase_2next"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_8.keys = []
+key_resp_8.rt = []
+_key_resp_8_allKeys = []
+# keep track of which components have finished
+waiting_phase_2nextComponents = [image_13, key_resp_8]
+for thisComponent in waiting_phase_2nextComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+waiting_phase_2nextClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "waiting_phase_2next"-------
+while continueRoutine:
+    # get current time
+    t = waiting_phase_2nextClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=waiting_phase_2nextClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *image_13* updates
+    if image_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        image_13.frameNStart = frameN  # exact frame index
+        image_13.tStart = t  # local t and not account for scr refresh
+        image_13.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image_13, 'tStartRefresh')  # time at next scr refresh
+        image_13.setAutoDraw(True)
+    
+    # *key_resp_8* updates
+    waitOnFlip = False
+    if key_resp_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_8.frameNStart = frameN  # exact frame index
+        key_resp_8.tStart = t  # local t and not account for scr refresh
+        key_resp_8.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_8, 'tStartRefresh')  # time at next scr refresh
+        key_resp_8.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_8.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(key_resp_8.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_8.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_8.getKeys(keyList=['space'], waitRelease=False)
+        _key_resp_8_allKeys.extend(theseKeys)
+        if len(_key_resp_8_allKeys):
+            key_resp_8.keys = _key_resp_8_allKeys[-1].name  # just the last key pressed
+            key_resp_8.rt = _key_resp_8_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in waiting_phase_2nextComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "waiting_phase_2next"-------
+for thisComponent in waiting_phase_2nextComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('image_13.started', image_13.tStartRefresh)
+thisExp.addData('image_13.stopped', image_13.tStopRefresh)
+# check responses
+if key_resp_8.keys in ['', [], None]:  # No response was made
+    key_resp_8.keys = None
+thisExp.addData('key_resp_8.keys',key_resp_8.keys)
+if key_resp_8.keys != None:  # we had a response
+    thisExp.addData('key_resp_8.rt', key_resp_8.rt)
+thisExp.addData('key_resp_8.started', key_resp_8.tStartRefresh)
+thisExp.addData('key_resp_8.stopped', key_resp_8.tStopRefresh)
+thisExp.nextEntry()
+# the Routine "waiting_phase_2next" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # ------Prepare to start Routine "phase3intro"-------
 continueRoutine = True

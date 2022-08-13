@@ -1,10 +1,18 @@
 ﻿/******************************** 
- * Td_Expv4_Ph1Ph2Ph3_0812 Test *
+ * Td_Expv4_Ph1Ph2Ph3_0813 Test *
  ********************************/
+
+import { core, data, sound, util, visual } from './lib/psychojs-2021.2.3.js';
+const { PsychoJS } = core;
+const { TrialHandler } = data;
+const { Scheduler } = util;
+//some handy aliases as in the psychopy scripts;
+const { abs, sin, cos, PI: pi, sqrt } = Math;
+const { round } = util;
 
 
 // store info about the experiment session:
-let expName = 'TD_expV4_ph1ph2ph3_0812';  // from the Builder filename that created this script
+let expName = 'TD_expV4_ph1ph2ph3_0813';  // from the Builder filename that created this script
 let expInfo = {'participant': '', 'session': '001'};
 
 // Start code blocks for 'Before Experiment'
@@ -54,6 +62,13 @@ const trialsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trialsLoopBegin(trialsLoopScheduler));
 flowScheduler.add(trialsLoopScheduler);
 flowScheduler.add(trialsLoopEnd);
+const trials_5LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(trials_5LoopBegin(trials_5LoopScheduler));
+flowScheduler.add(trials_5LoopScheduler);
+flowScheduler.add(trials_5LoopEnd);
+flowScheduler.add(waiting_phase_2nextRoutineBegin());
+flowScheduler.add(waiting_phase_2nextRoutineEachFrame());
+flowScheduler.add(waiting_phase_2nextRoutineEnd());
 flowScheduler.add(phase3introRoutineBegin());
 flowScheduler.add(phase3introRoutineEachFrame());
 flowScheduler.add(phase3introRoutineEnd());
@@ -96,143 +111,148 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'cond/ph3_timepoint/t89.xlsx', 'path': 'cond/ph3_timepoint/t89.xlsx'},
-    {'name': 'img/img_button/1button.jpg', 'path': 'img/img_button/1button.jpg'},
-    {'name': 'cond/ph3_timepoint/t212.xlsx', 'path': 'cond/ph3_timepoint/t212.xlsx'},
-    {'name': 'img/img_person/py1.png', 'path': 'img/img_person/py1.png'},
-    {'name': 'img/img_button/2button.jpg', 'path': 'img/img_button/2button.jpg'},
-    {'name': 'cond/ph3_timepoint/t1012.xlsx', 'path': 'cond/ph3_timepoint/t1012.xlsx'},
-    {'name': 'cond/ph3_timepoint/t37.xlsx', 'path': 'cond/ph3_timepoint/t37.xlsx'},
-    {'name': 'cond/ph3_timepoint/t27.xlsx', 'path': 'cond/ph3_timepoint/t27.xlsx'},
-    {'name': 'img/img_axis/ax13.png', 'path': 'img/img_axis/ax13.png'},
-    {'name': 'img/img_axis/ax25.png', 'path': 'img/img_axis/ax25.png'},
-    {'name': 'img/img_axis/ax35.png', 'path': 'img/img_axis/ax35.png'},
-    {'name': 'img/img_instruction/ph3_formalinstr.png', 'path': 'img/img_instruction/ph3_formalinstr.png'},
-    {'name': 'img/img_axis/ax31.png', 'path': 'img/img_axis/ax31.png'},
-    {'name': 'cond/ph3_timepoint/t811.xlsx', 'path': 'cond/ph3_timepoint/t811.xlsx'},
-    {'name': 'cond/ph3_timepoint/t67.xlsx', 'path': 'cond/ph3_timepoint/t67.xlsx'},
-    {'name': 'cond/ph3_timepoint/t610.xlsx', 'path': 'cond/ph3_timepoint/t610.xlsx'},
-    {'name': 'cond/ph3_timepoint/t111.xlsx', 'path': 'cond/ph3_timepoint/t111.xlsx'},
-    {'name': 'cond/ph3_timepoint/t312.xlsx', 'path': 'cond/ph3_timepoint/t312.xlsx'},
-    {'name': 'img/img_axis/ax10.png', 'path': 'img/img_axis/ax10.png'},
-    {'name': 'cond/ph3_timepoint/t69.xlsx', 'path': 'cond/ph3_timepoint/t69.xlsx'},
-    {'name': 'img/img_axis/ax33.png', 'path': 'img/img_axis/ax33.png'},
-    {'name': 'img/img_axis/ax26.png', 'path': 'img/img_axis/ax26.png'},
-    {'name': 'cond/ph3_timepoint/t46.xlsx', 'path': 'cond/ph3_timepoint/t46.xlsx'},
-    {'name': 'img/img_person/py9.png', 'path': 'img/img_person/py9.png'},
-    {'name': 'img/img_axis/ax18.png', 'path': 'img/img_axis/ax18.png'},
-    {'name': 'cond/ph3_timepoint/t45.xlsx', 'path': 'cond/ph3_timepoint/t45.xlsx'},
-    {'name': 'cond/ph3_timepoint/t23.xlsx', 'path': 'cond/ph3_timepoint/t23.xlsx'},
+    {'name': 'cond/ph3_timepoint/t812.xlsx', 'path': 'cond/ph3_timepoint/t812.xlsx'},
     {'name': 'cond/ph3_timepoint/t14.xlsx', 'path': 'cond/ph3_timepoint/t14.xlsx'},
-    {'name': 'cond/ph3_timepoint/t912.xlsx', 'path': 'cond/ph3_timepoint/t912.xlsx'},
-    {'name': 'img/img_button/3button.jpg', 'path': 'img/img_button/3button.jpg'},
-    {'name': 'cond/ph3_timepoint/t13.xlsx', 'path': 'cond/ph3_timepoint/t13.xlsx'},
-    {'name': 'img/img_axis/ax32.png', 'path': 'img/img_axis/ax32.png'},
-    {'name': 'cond/ph3_timepoint/t110.xlsx', 'path': 'cond/ph3_timepoint/t110.xlsx'},
-    {'name': 'img/img_axis/ax9.png', 'path': 'img/img_axis/ax9.png'},
-    {'name': 'img/img_axis/ax8.png', 'path': 'img/img_axis/ax8.png'},
-    {'name': 'cond/tabletotal.xlsx', 'path': 'cond/tabletotal.xlsx'},
-    {'name': 'img/img_axis/ax36.png', 'path': 'img/img_axis/ax36.png'},
-    {'name': 'img/img_person/py8.png', 'path': 'img/img_person/py8.png'},
-    {'name': 'cond/waiting_period.xlsx', 'path': 'cond/waiting_period.xlsx'},
-    {'name': 'img/img_axis/ax34.png', 'path': 'img/img_axis/ax34.png'},
-    {'name': 'img/img_instruction/ph4intro.png', 'path': 'img/img_instruction/ph4intro.png'},
-    {'name': 'cond/ph3_timepoint/t911.xlsx', 'path': 'cond/ph3_timepoint/t911.xlsx'},
-    {'name': 'cond/ph3_timepoint/t112.xlsx', 'path': 'cond/ph3_timepoint/t112.xlsx'},
-    {'name': 'cond/ph3_timepoint/t1011.xlsx', 'path': 'cond/ph3_timepoint/t1011.xlsx'},
+    {'name': 'img/img_button/5axis_now.jpg', 'path': 'img/img_button/5axis_now.jpg'},
+    {'name': 'img/img_axis/ax11.png', 'path': 'img/img_axis/ax11.png'},
+    {'name': 'cond/ph3_timepoint/t910.xlsx', 'path': 'cond/ph3_timepoint/t910.xlsx'},
     {'name': 'img/img_person/myself.png', 'path': 'img/img_person/myself.png'},
-    {'name': 'cond/ph3_timepoint/t710.xlsx', 'path': 'cond/ph3_timepoint/t710.xlsx'},
+    {'name': 'cond/ph3_timepoint/t210.xlsx', 'path': 'cond/ph3_timepoint/t210.xlsx'},
+    {'name': 'img/img_axis/ax29.png', 'path': 'img/img_axis/ax29.png'},
+    {'name': 'cond/ph3_timepoint/t911.xlsx', 'path': 'cond/ph3_timepoint/t911.xlsx'},
+    {'name': 'cond/ph3_timepoint/t58.xlsx', 'path': 'cond/ph3_timepoint/t58.xlsx'},
+    {'name': 'cond/waiting_p2.xlsx', 'path': 'cond/waiting_p2.xlsx'},
+    {'name': 'img/img_axis/ax18.png', 'path': 'img/img_axis/ax18.png'},
+    {'name': 'img/img_instruction/ph3intro.png', 'path': 'img/img_instruction/ph3intro.png'},
+    {'name': 'cond/ph3_timepoint/t69.xlsx', 'path': 'cond/ph3_timepoint/t69.xlsx'},
     {'name': 'cond/ph3_timepoint/t511.xlsx', 'path': 'cond/ph3_timepoint/t511.xlsx'},
-    {'name': 'img/img_button/4axis_now.jpg', 'path': 'img/img_button/4axis_now.jpg'},
-    {'name': 'img/img_instruction/ph2intro.png', 'path': 'img/img_instruction/ph2intro.png'},
+    {'name': 'cond/ph3_timepoint/t510.xlsx', 'path': 'cond/ph3_timepoint/t510.xlsx'},
+    {'name': 'cond/ph3_timepoint/t23.xlsx', 'path': 'cond/ph3_timepoint/t23.xlsx'},
+    {'name': 'cond/ph3_timepoint/t1012.xlsx', 'path': 'cond/ph3_timepoint/t1012.xlsx'},
+    {'name': 'img/img_axis/ax1.png', 'path': 'img/img_axis/ax1.png'},
+    {'name': 'cond/ph3_timepoint/t611.xlsx', 'path': 'cond/ph3_timepoint/t611.xlsx'},
+    {'name': 'cond/ph3_timepoint/t27.xlsx', 'path': 'cond/ph3_timepoint/t27.xlsx'},
+    {'name': 'cond/horriblepicture.xlsx', 'path': 'cond/horriblepicture.xlsx'},
+    {'name': 'img/img_axis/ax36.png', 'path': 'img/img_axis/ax36.png'},
+    {'name': 'img/img_axis/ax3.png', 'path': 'img/img_axis/ax3.png'},
+    {'name': 'img/img_button_ph2/button_B.jpg', 'path': 'img/img_button_ph2/button_B.jpg'},
+    {'name': 'cond/ph3_timepoint/t110.xlsx', 'path': 'cond/ph3_timepoint/t110.xlsx'},
+    {'name': 'img/img_axis/ax7.png', 'path': 'img/img_axis/ax7.png'},
+    {'name': 'img/img_axis/ax27.png', 'path': 'img/img_axis/ax27.png'},
+    {'name': 'img/img_button/2button.jpg', 'path': 'img/img_button/2button.jpg'},
+    {'name': 'cond/ph3_timepoint/t57.xlsx', 'path': 'cond/ph3_timepoint/t57.xlsx'},
+    {'name': 'cond/ph3_timepoint/t56.xlsx', 'path': 'cond/ph3_timepoint/t56.xlsx'},
     {'name': 'cond/ph3_timepoint/t18.xlsx', 'path': 'cond/ph3_timepoint/t18.xlsx'},
-    {'name': 'img/img_axis/ax16.png', 'path': 'img/img_axis/ax16.png'},
-    {'name': 'img/img_axis/ax17.png', 'path': 'img/img_axis/ax17.png'},
-    {'name': 'cond/ph3_timepoint/t47.xlsx', 'path': 'cond/ph3_timepoint/t47.xlsx'},
-    {'name': 'img/img_button_ph2/button_D.jpg', 'path': 'img/img_button_ph2/button_D.jpg'},
-    {'name': 'cond/ph3_timepoint/t17.xlsx', 'path': 'cond/ph3_timepoint/t17.xlsx'},
-    {'name': 'cond/ph3_timepoint/t712.xlsx', 'path': 'cond/ph3_timepoint/t712.xlsx'},
-    {'name': 'cond/ph3_timepoint/t810.xlsx', 'path': 'cond/ph3_timepoint/t810.xlsx'},
-    {'name': 'img/img_person/py6.png', 'path': 'img/img_person/py6.png'},
-    {'name': 'img/img_horriblethreat/horrible1.png', 'path': 'img/img_horriblethreat/horrible1.png'},
-    {'name': 'cond/ph3_timepoint/t36.xlsx', 'path': 'cond/ph3_timepoint/t36.xlsx'},
-    {'name': 'cond/ph3_timepoint/t412.xlsx', 'path': 'cond/ph3_timepoint/t412.xlsx'},
+    {'name': 'img/img_axis/ax32.png', 'path': 'img/img_axis/ax32.png'},
+    {'name': 'cond/ph3_timepoint/t411.xlsx', 'path': 'cond/ph3_timepoint/t411.xlsx'},
+    {'name': 'cond/ph3_timepoint/t312.xlsx', 'path': 'cond/ph3_timepoint/t312.xlsx'},
+    {'name': 'img/img_axis/ax31.png', 'path': 'img/img_axis/ax31.png'},
+    {'name': 'img/img_instruction/ph2.png', 'path': 'img/img_instruction/ph2.png'},
+    {'name': 'img/img_axis/ax34.png', 'path': 'img/img_axis/ax34.png'},
+    {'name': 'img/img_instruction/waiting_phase2next.png', 'path': 'img/img_instruction/waiting_phase2next.png'},
+    {'name': 'img/img_axis/ax33.png', 'path': 'img/img_axis/ax33.png'},
+    {'name': 'cond/ph3_timepoint/t37.xlsx', 'path': 'cond/ph3_timepoint/t37.xlsx'},
+    {'name': 'cond/ph3_timepoint/t211.xlsx', 'path': 'cond/ph3_timepoint/t211.xlsx'},
+    {'name': 'img/img_axis/ax13.png', 'path': 'img/img_axis/ax13.png'},
+    {'name': 'img/img_axis/ax5.png', 'path': 'img/img_axis/ax5.png'},
+    {'name': 'img/img_horriblethreat/hopic_evl0.png', 'path': 'img/img_horriblethreat/hopic_evl0.png'},
+    {'name': 'img/img_axis/ax35.png', 'path': 'img/img_axis/ax35.png'},
+    {'name': 'cond/ph3_timepoint/t25.xlsx', 'path': 'cond/ph3_timepoint/t25.xlsx'},
     {'name': 'img/img_axis/ax19.png', 'path': 'img/img_axis/ax19.png'},
     {'name': 'img/img_axis/ax24.png', 'path': 'img/img_axis/ax24.png'},
-    {'name': 'cond/ph3_timepoint/t15.xlsx', 'path': 'cond/ph3_timepoint/t15.xlsx'},
-    {'name': 'img/img_axis/ax6.png', 'path': 'img/img_axis/ax6.png'},
-    {'name': 'cond/ph3_timepoint/t410.xlsx', 'path': 'cond/ph3_timepoint/t410.xlsx'},
-    {'name': 'img/img_axis/ax15.png', 'path': 'img/img_axis/ax15.png'},
-    {'name': 'img/img_instruction/ph1intro.png', 'path': 'img/img_instruction/ph1intro.png'},
-    {'name': 'cond/ph3_timepoint/t48.xlsx', 'path': 'cond/ph3_timepoint/t48.xlsx'},
-    {'name': 'cond/ph3_timepoint/t49.xlsx', 'path': 'cond/ph3_timepoint/t49.xlsx'},
-    {'name': 'cond/ph3_timepoint/t79.xlsx', 'path': 'cond/ph3_timepoint/t79.xlsx'},
-    {'name': 'cond/ph3_timepoint/t711.xlsx', 'path': 'cond/ph3_timepoint/t711.xlsx'},
-    {'name': 'img/img_horriblethreat/horriblethreatfinal.png', 'path': 'img/img_horriblethreat/horriblethreatfinal.png'},
-    {'name': 'img/img_person/py7.png', 'path': 'img/img_person/py7.png'},
-    {'name': 'img/img_horriblethreat/hopic_evl0.png', 'path': 'img/img_horriblethreat/hopic_evl0.png'},
-    {'name': 'cond/ph3_timepoint/t510.xlsx', 'path': 'cond/ph3_timepoint/t510.xlsx'},
-    {'name': 'cond/ph3_timepoint/t57.xlsx', 'path': 'cond/ph3_timepoint/t57.xlsx'},
-    {'name': 'cond/ph3_timepoint/t910.xlsx', 'path': 'cond/ph3_timepoint/t910.xlsx'},
-    {'name': 'img/img_axis/ax22.png', 'path': 'img/img_axis/ax22.png'},
-    {'name': 'img/img_button_ph2/button_C.jpg', 'path': 'img/img_button_ph2/button_C.jpg'},
-    {'name': 'img/img_axis/ax30.png', 'path': 'img/img_axis/ax30.png'},
-    {'name': 'img/img_person/py2.png', 'path': 'img/img_person/py2.png'},
-    {'name': 'cond/ph3_timepoint/t78.xlsx', 'path': 'cond/ph3_timepoint/t78.xlsx'},
-    {'name': 'img/img_axis/ax1.png', 'path': 'img/img_axis/ax1.png'},
-    {'name': 'img/img_horriblethreat/horrible2.png', 'path': 'img/img_horriblethreat/horrible2.png'},
-    {'name': 'img/img_button/5axis_now.jpg', 'path': 'img/img_button/5axis_now.jpg'},
-    {'name': 'img/img_axis/ax5.png', 'path': 'img/img_axis/ax5.png'},
-    {'name': 'cond/ph3_timepoint/t311.xlsx', 'path': 'cond/ph3_timepoint/t311.xlsx'},
-    {'name': 'img/img_axis/ax20.png', 'path': 'img/img_axis/ax20.png'},
-    {'name': 'cond/ph3_timepoint/t611.xlsx', 'path': 'cond/ph3_timepoint/t611.xlsx'},
-    {'name': 'cond/ph3_timepoint/t210.xlsx', 'path': 'cond/ph3_timepoint/t210.xlsx'},
-    {'name': 'cond/ph3_timepoint/t411.xlsx', 'path': 'cond/ph3_timepoint/t411.xlsx'},
-    {'name': 'cond/ph3_timepoint/t612.xlsx', 'path': 'cond/ph3_timepoint/t612.xlsx'},
-    {'name': 'img/img_axis/ax14.png', 'path': 'img/img_axis/ax14.png'},
-    {'name': 'cond/ph3_timepoint/t68.xlsx', 'path': 'cond/ph3_timepoint/t68.xlsx'},
-    {'name': 'img/img_axis/ax4.png', 'path': 'img/img_axis/ax4.png'},
-    {'name': 'cond/ph3_timepoint/t12.xlsx', 'path': 'cond/ph3_timepoint/t12.xlsx'},
-    {'name': 'img/img_axis/ax29.png', 'path': 'img/img_axis/ax29.png'},
-    {'name': 'img/img_axis/ax28.png', 'path': 'img/img_axis/ax28.png'},
-    {'name': 'img/img_button_ph2/button_A.jpg', 'path': 'img/img_button_ph2/button_A.jpg'},
-    {'name': 'img/img_instruction/ph3intro.png', 'path': 'img/img_instruction/ph3intro.png'},
-    {'name': 'cond/horriblepicture.xlsx', 'path': 'cond/horriblepicture.xlsx'},
-    {'name': 'img/img_button_ph2/button_B.jpg', 'path': 'img/img_button_ph2/button_B.jpg'},
-    {'name': 'cond/ph3_timepoint/t25.xlsx', 'path': 'cond/ph3_timepoint/t25.xlsx'},
-    {'name': 'img/img_axis/ax7.png', 'path': 'img/img_axis/ax7.png'},
-    {'name': 'img/img_horriblethreat/horriblethreatpractice.png', 'path': 'img/img_horriblethreat/horriblethreatpractice.png'},
-    {'name': 'cond/ph3_timepoint/t59.xlsx', 'path': 'cond/ph3_timepoint/t59.xlsx'},
-    {'name': 'img/img_axis/ax3.png', 'path': 'img/img_axis/ax3.png'},
-    {'name': 'img/img_person/py4.png', 'path': 'img/img_person/py4.png'},
-    {'name': 'cond/ph3_timepoint/t35.xlsx', 'path': 'cond/ph3_timepoint/t35.xlsx'},
-    {'name': 'cond/ph3_timepoint/t26.xlsx', 'path': 'cond/ph3_timepoint/t26.xlsx'},
-    {'name': 'cond/ph3_timepoint/t34.xlsx', 'path': 'cond/ph3_timepoint/t34.xlsx'},
-    {'name': 'cond/ph3_timepoint/t16.xlsx', 'path': 'cond/ph3_timepoint/t16.xlsx'},
-    {'name': 'img/img_axis/ax12.png', 'path': 'img/img_axis/ax12.png'},
+    {'name': 'cond/ph3_timepoint/t112.xlsx', 'path': 'cond/ph3_timepoint/t112.xlsx'},
     {'name': 'cond/ph3_timepoint/t19.xlsx', 'path': 'cond/ph3_timepoint/t19.xlsx'},
-    {'name': 'cond/ph3_timepoint/t211.xlsx', 'path': 'cond/ph3_timepoint/t211.xlsx'},
-    {'name': 'cond/ph3_timepoint/t58.xlsx', 'path': 'cond/ph3_timepoint/t58.xlsx'},
-    {'name': 'cond/ph3_timepoint/t39.xlsx', 'path': 'cond/ph3_timepoint/t39.xlsx'},
-    {'name': 'img/img_person/py5.png', 'path': 'img/img_person/py5.png'},
-    {'name': 'cond/ph3_timepoint/t812.xlsx', 'path': 'cond/ph3_timepoint/t812.xlsx'},
-    {'name': 'img/img_instruction/ph3_practiceinstr.png', 'path': 'img/img_instruction/ph3_practiceinstr.png'},
-    {'name': 'img/img_instruction/ph3.png', 'path': 'img/img_instruction/ph3.png'},
-    {'name': 'cond/ph3_timepoint/t38.xlsx', 'path': 'cond/ph3_timepoint/t38.xlsx'},
-    {'name': 'img/img_axis/ax11.png', 'path': 'img/img_axis/ax11.png'},
-    {'name': 'cond/ph3_timepoint/t56.xlsx', 'path': 'cond/ph3_timepoint/t56.xlsx'},
-    {'name': 'img/img_person/py3.png', 'path': 'img/img_person/py3.png'},
-    {'name': 'img/img_axis/ax27.png', 'path': 'img/img_axis/ax27.png'},
-    {'name': 'cond/ph3_timepoint/t512.xlsx', 'path': 'cond/ph3_timepoint/t512.xlsx'},
-    {'name': 'cond/ph3_timepoint/t28.xlsx', 'path': 'cond/ph3_timepoint/t28.xlsx'},
-    {'name': 'img/img_axis/ax2.png', 'path': 'img/img_axis/ax2.png'},
-    {'name': 'cond/ph3_timepoint/t24.xlsx', 'path': 'cond/ph3_timepoint/t24.xlsx'},
-    {'name': 'cond/ph3_timepoint/t310.xlsx', 'path': 'cond/ph3_timepoint/t310.xlsx'},
     {'name': 'img/img_axis/ax23.png', 'path': 'img/img_axis/ax23.png'},
+    {'name': 'img/img_horriblethreat/horrible1.png', 'path': 'img/img_horriblethreat/horrible1.png'},
+    {'name': 'cond/ph3_timepoint/t48.xlsx', 'path': 'cond/ph3_timepoint/t48.xlsx'},
+    {'name': 'img/img_axis/ax30.png', 'path': 'img/img_axis/ax30.png'},
+    {'name': 'cond/ph3_timepoint/t610.xlsx', 'path': 'cond/ph3_timepoint/t610.xlsx'},
+    {'name': 'img/img_instruction/ph3_formalinstr.png', 'path': 'img/img_instruction/ph3_formalinstr.png'},
+    {'name': 'cond/ph3_timepoint/t512.xlsx', 'path': 'cond/ph3_timepoint/t512.xlsx'},
+    {'name': 'cond/ph3_timepoint/t36.xlsx', 'path': 'cond/ph3_timepoint/t36.xlsx'},
     {'name': 'cond/ph3_timepoint/t1112.xlsx', 'path': 'cond/ph3_timepoint/t1112.xlsx'},
+    {'name': 'cond/ph3_timepoint/t67.xlsx', 'path': 'cond/ph3_timepoint/t67.xlsx'},
+    {'name': 'cond/ph3_timepoint/t35.xlsx', 'path': 'cond/ph3_timepoint/t35.xlsx'},
+    {'name': 'img/img_instruction/waiting_phase2b.png', 'path': 'img/img_instruction/waiting_phase2b.png'},
+    {'name': 'img/img_button/4axis_now.jpg', 'path': 'img/img_button/4axis_now.jpg'},
+    {'name': 'img/img_horriblethreat/horriblethreatpractice.png', 'path': 'img/img_horriblethreat/horriblethreatpractice.png'},
+    {'name': 'cond/ph3_timepoint/t912.xlsx', 'path': 'cond/ph3_timepoint/t912.xlsx'},
+    {'name': 'cond/ph3_timepoint/t34.xlsx', 'path': 'cond/ph3_timepoint/t34.xlsx'},
+    {'name': 'img/img_person/py9.png', 'path': 'img/img_person/py9.png'},
+    {'name': 'img/img_button/3button.jpg', 'path': 'img/img_button/3button.jpg'},
+    {'name': 'cond/ph3_timepoint/t811.xlsx', 'path': 'cond/ph3_timepoint/t811.xlsx'},
+    {'name': 'img/img_axis/ax17.png', 'path': 'img/img_axis/ax17.png'},
+    {'name': 'img/img_axis/ax6.png', 'path': 'img/img_axis/ax6.png'},
+    {'name': 'img/img_instruction/waiting_phase2a.png', 'path': 'img/img_instruction/waiting_phase2a.png'},
+    {'name': 'cond/ph3_timepoint/t16.xlsx', 'path': 'cond/ph3_timepoint/t16.xlsx'},
+    {'name': 'img/img_instruction/ph2intro.png', 'path': 'img/img_instruction/ph2intro.png'},
+    {'name': 'img/img_axis/ax28.png', 'path': 'img/img_axis/ax28.png'},
+    {'name': 'img/img_axis/ax9.png', 'path': 'img/img_axis/ax9.png'},
+    {'name': 'cond/tabletotal.xlsx', 'path': 'cond/tabletotal.xlsx'},
+    {'name': 'img/img_instruction/ph3_practiceinstr.png', 'path': 'img/img_instruction/ph3_practiceinstr.png'},
+    {'name': 'cond/ph3_timepoint/t46.xlsx', 'path': 'cond/ph3_timepoint/t46.xlsx'},
+    {'name': 'img/img_person/py2.png', 'path': 'img/img_person/py2.png'},
+    {'name': 'cond/ph3_timepoint/t412.xlsx', 'path': 'cond/ph3_timepoint/t412.xlsx'},
+    {'name': 'cond/ph3_timepoint/t26.xlsx', 'path': 'cond/ph3_timepoint/t26.xlsx'},
+    {'name': 'img/img_axis/ax15.png', 'path': 'img/img_axis/ax15.png'},
+    {'name': 'cond/ph3_timepoint/t29.xlsx', 'path': 'cond/ph3_timepoint/t29.xlsx'},
+    {'name': 'cond/ph3_timepoint/t39.xlsx', 'path': 'cond/ph3_timepoint/t39.xlsx'},
+    {'name': 'img/img_axis/ax22.png', 'path': 'img/img_axis/ax22.png'},
+    {'name': 'cond/ph3_timepoint/t79.xlsx', 'path': 'cond/ph3_timepoint/t79.xlsx'},
+    {'name': 'img/img_person/py1.png', 'path': 'img/img_person/py1.png'},
+    {'name': 'cond/ph3_timepoint/t47.xlsx', 'path': 'cond/ph3_timepoint/t47.xlsx'},
+    {'name': 'cond/ph3_timepoint/t78.xlsx', 'path': 'cond/ph3_timepoint/t78.xlsx'},
+    {'name': 'cond/ph3_timepoint/t612.xlsx', 'path': 'cond/ph3_timepoint/t612.xlsx'},
+    {'name': 'cond/ph3_timepoint/t111.xlsx', 'path': 'cond/ph3_timepoint/t111.xlsx'},
+    {'name': 'cond/ph3_timepoint/t310.xlsx', 'path': 'cond/ph3_timepoint/t310.xlsx'},
+    {'name': 'cond/waiting_period.xlsx', 'path': 'cond/waiting_period.xlsx'},
+    {'name': 'cond/ph3_timepoint/t12.xlsx', 'path': 'cond/ph3_timepoint/t12.xlsx'},
     {'name': 'img/img_axis/ax21.png', 'path': 'img/img_axis/ax21.png'},
+    {'name': 'img/img_instruction/ph3.png', 'path': 'img/img_instruction/ph3.png'},
+    {'name': 'img/img_axis/ax16.png', 'path': 'img/img_axis/ax16.png'},
+    {'name': 'img/img_button_ph2/button_A.jpg', 'path': 'img/img_button_ph2/button_A.jpg'},
+    {'name': 'cond/ph3_timepoint/t1011.xlsx', 'path': 'cond/ph3_timepoint/t1011.xlsx'},
+    {'name': 'img/img_axis/ax26.png', 'path': 'img/img_axis/ax26.png'},
+    {'name': 'cond/ph3_timepoint/t212.xlsx', 'path': 'cond/ph3_timepoint/t212.xlsx'},
+    {'name': 'cond/ph3_timepoint/t89.xlsx', 'path': 'cond/ph3_timepoint/t89.xlsx'},
+    {'name': 'img/img_button_ph2/button_D.jpg', 'path': 'img/img_button_ph2/button_D.jpg'},
+    {'name': 'cond/ph3_timepoint/t712.xlsx', 'path': 'cond/ph3_timepoint/t712.xlsx'},
+    {'name': 'img/img_axis/ax12.png', 'path': 'img/img_axis/ax12.png'},
+    {'name': 'cond/ph3_timepoint/t311.xlsx', 'path': 'cond/ph3_timepoint/t311.xlsx'},
+    {'name': 'cond/ph3_timepoint/t28.xlsx', 'path': 'cond/ph3_timepoint/t28.xlsx'},
+    {'name': 'cond/ph3_timepoint/t24.xlsx', 'path': 'cond/ph3_timepoint/t24.xlsx'},
+    {'name': 'img/img_person/py4.png', 'path': 'img/img_person/py4.png'},
+    {'name': 'img/img_person/py3.png', 'path': 'img/img_person/py3.png'},
+    {'name': 'img/img_axis/ax25.png', 'path': 'img/img_axis/ax25.png'},
+    {'name': 'cond/ph3_timepoint/t710.xlsx', 'path': 'cond/ph3_timepoint/t710.xlsx'},
+    {'name': 'cond/ph3_timepoint/t13.xlsx', 'path': 'cond/ph3_timepoint/t13.xlsx'},
+    {'name': 'img/img_person/py8.png', 'path': 'img/img_person/py8.png'},
+    {'name': 'img/img_axis/ax14.png', 'path': 'img/img_axis/ax14.png'},
+    {'name': 'img/img_axis/ax4.png', 'path': 'img/img_axis/ax4.png'},
+    {'name': 'img/img_instruction/ph1intro.png', 'path': 'img/img_instruction/ph1intro.png'},
+    {'name': 'img/img_instruction/ph4intro.png', 'path': 'img/img_instruction/ph4intro.png'},
+    {'name': 'cond/ph3_timepoint/t17.xlsx', 'path': 'cond/ph3_timepoint/t17.xlsx'},
+    {'name': 'cond/ph3_timepoint/t810.xlsx', 'path': 'cond/ph3_timepoint/t810.xlsx'},
+    {'name': 'cond/ph3_timepoint/t711.xlsx', 'path': 'cond/ph3_timepoint/t711.xlsx'},
+    {'name': 'cond/ph3_timepoint/t410.xlsx', 'path': 'cond/ph3_timepoint/t410.xlsx'},
     {'name': 'cond/ph2_cond.xlsx', 'path': 'cond/ph2_cond.xlsx'},
-    {'name': 'cond/ph3_timepoint/t29.xlsx', 'path': 'cond/ph3_timepoint/t29.xlsx'}
+    {'name': 'img/img_button/1button.jpg', 'path': 'img/img_button/1button.jpg'},
+    {'name': 'img/img_axis/ax10.png', 'path': 'img/img_axis/ax10.png'},
+    {'name': 'img/img_button_ph2/button_C.jpg', 'path': 'img/img_button_ph2/button_C.jpg'},
+    {'name': 'cond/ph3_timepoint/t68.xlsx', 'path': 'cond/ph3_timepoint/t68.xlsx'},
+    {'name': 'cond/ph3_timepoint/t49.xlsx', 'path': 'cond/ph3_timepoint/t49.xlsx'},
+    {'name': 'img/img_person/py5.png', 'path': 'img/img_person/py5.png'},
+    {'name': 'img/img_horriblethreat/horriblethreatfinal.png', 'path': 'img/img_horriblethreat/horriblethreatfinal.png'},
+    {'name': 'img/img_horriblethreat/horrible2.png', 'path': 'img/img_horriblethreat/horrible2.png'},
+    {'name': 'cond/ph3_timepoint/t38.xlsx', 'path': 'cond/ph3_timepoint/t38.xlsx'},
+    {'name': 'cond/ph3_timepoint/t45.xlsx', 'path': 'cond/ph3_timepoint/t45.xlsx'},
+    {'name': 'img/img_person/py6.png', 'path': 'img/img_person/py6.png'},
+    {'name': 'img/img_axis/ax20.png', 'path': 'img/img_axis/ax20.png'},
+    {'name': 'img/img_axis/ax2.png', 'path': 'img/img_axis/ax2.png'},
+    {'name': 'img/img_axis/ax8.png', 'path': 'img/img_axis/ax8.png'},
+    {'name': 'cond/ph3_timepoint/t59.xlsx', 'path': 'cond/ph3_timepoint/t59.xlsx'},
+    {'name': 'cond/ph3_timepoint/t15.xlsx', 'path': 'cond/ph3_timepoint/t15.xlsx'},
+    {'name': 'img/img_person/py7.png', 'path': 'img/img_person/py7.png'}
   ]
 });
 
@@ -307,6 +327,7 @@ var list_1_remove;
 var list_2_remove;
 var list_3_remove;
 var list_4_remove;
+var image_phase2instru;
 var image_ax1;
 var image_ax2;
 var image_ax3;
@@ -325,6 +346,16 @@ var image_ph2axisnow1;
 var image_ph2axisnow2;
 var image_ph2axisnow3;
 var image_ph2axisnow4;
+var waiting_phase2Clock;
+var text_9;
+var text_10;
+var text_12;
+var text_13;
+var image_14;
+var image_15;
+var waiting_phase_2nextClock;
+var image_13;
+var key_resp_8;
 var phase3introClock;
 var image_2;
 var key_resp_4;
@@ -496,7 +527,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_phase1intro', units : undefined, 
     image : 'img/img_instruction/ph1intro.png', mask : undefined,
-    ori : 0.0, pos : [0, 0], size : [1.2, 1],
+    ori : 0.0, pos : [0, (- 0.1)], size : [1.2, 1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0 
@@ -587,7 +618,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_phase2intro', units : undefined, 
     image : 'img/img_instruction/ph2intro.png', mask : undefined,
-    ori : 0.0, pos : [0, 0.1], size : [1.2, 0.5],
+    ori : 0.0, pos : [0, 0.1], size : [1.2, 0.7],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0 
@@ -597,8 +628,8 @@ async function experimentInit() {
   image_12 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_12', units : undefined, 
-    image : 'img/img_axis/ax1.png', mask : undefined,
-    ori : 0.0, pos : [0, (- 0.1)], size : [0.2, 0.7],
+    image : 'img/img_axis/ax5.png', mask : undefined,
+    ori : 0.0, pos : [0, (- 0.1)], size : [0.15, 0.4],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -2.0 
@@ -622,6 +653,15 @@ async function experimentInit() {
   list_3_remove = [];
   list_4_remove = [];
   
+  image_phase2instru = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_phase2instru', units : undefined, 
+    image : 'img/img_instruction/ph2.png', mask : undefined,
+    ori : 0.0, pos : [0, 0.1], size : [1.5, 0.9],
+    color : new util.Color([1, 1, 1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -1.0 
+  });
   image_ax1 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_ax1', units : undefined, 
@@ -629,7 +669,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0], size : [0.2, 0.7],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -1.0 
+    texRes : 128.0, interpolate : true, depth : -2.0 
   });
   image_ax2 = new visual.ImageStim({
     win : psychoJS.window,
@@ -638,7 +678,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0], size : [0.2, 0.7],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -2.0 
+    texRes : 128.0, interpolate : true, depth : -3.0 
   });
   image_ax3 = new visual.ImageStim({
     win : psychoJS.window,
@@ -647,7 +687,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0], size : [0.2, 0.7],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -3.0 
+    texRes : 128.0, interpolate : true, depth : -4.0 
   });
   image_ax4 = new visual.ImageStim({
     win : psychoJS.window,
@@ -656,7 +696,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0], size : [0.2, 0.7],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -4.0 
+    texRes : 128.0, interpolate : true, depth : -5.0 
   });
   image_buttonA = new visual.ImageStim({
     win : psychoJS.window,
@@ -665,7 +705,7 @@ async function experimentInit() {
     ori : 0.0, pos : [(- 0.35), (- 0.4)], size : [0.18, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -5.0 
+    texRes : 128.0, interpolate : true, depth : -6.0 
   });
   image_buttonB = new visual.ImageStim({
     win : psychoJS.window,
@@ -674,7 +714,7 @@ async function experimentInit() {
     ori : 0.0, pos : [(- 0.05), (- 0.4)], size : [0.18, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -6.0 
+    texRes : 128.0, interpolate : true, depth : -7.0 
   });
   image_buttonC = new visual.ImageStim({
     win : psychoJS.window,
@@ -683,7 +723,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0.25, (- 0.4)], size : [0.18, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -7.0 
+    texRes : 128.0, interpolate : true, depth : -8.0 
   });
   image_buttonD = new visual.ImageStim({
     win : psychoJS.window,
@@ -692,7 +732,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0.55, (- 0.4)], size : [0.18, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -8.0 
+    texRes : 128.0, interpolate : true, depth : -9.0 
   });
   image_personpic = new visual.ImageStim({
     win : psychoJS.window,
@@ -701,7 +741,7 @@ async function experimentInit() {
     ori : 0.0, pos : [(- 0.6), 0], size : [0.2, 0.2],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -9.0 
+    texRes : 128.0, interpolate : true, depth : -10.0 
   });
   mouse_A = new core.Mouse({
     win: psychoJS.window,
@@ -727,7 +767,7 @@ async function experimentInit() {
     units: undefined, 
     pos: [(- 0.6), (- 0.1)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
-    depth: -14.0 
+    depth: -15.0 
   });
   
   image_ph2axisnow1 = new visual.ImageStim({
@@ -737,7 +777,7 @@ async function experimentInit() {
     ori : 0.0, pos : [(- 0.338), (- 0.31)], size : [0.09, 0.055],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -15.0 
+    texRes : 128.0, interpolate : true, depth : -16.0 
   });
   image_ph2axisnow2 = new visual.ImageStim({
     win : psychoJS.window,
@@ -746,7 +786,7 @@ async function experimentInit() {
     ori : 0.0, pos : [(- 0.038), (- 0.31)], size : [0.09, 0.055],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -16.0 
+    texRes : 128.0, interpolate : true, depth : -17.0 
   });
   image_ph2axisnow3 = new visual.ImageStim({
     win : psychoJS.window,
@@ -755,7 +795,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0.262, (- 0.31)], size : [0.09, 0.055],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -17.0 
+    texRes : 128.0, interpolate : true, depth : -18.0 
   });
   image_ph2axisnow4 = new visual.ImageStim({
     win : psychoJS.window,
@@ -764,8 +804,85 @@ async function experimentInit() {
     ori : 0.0, pos : [0.562, (- 0.31)], size : [0.09, 0.055],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -18.0 
+    texRes : 128.0, interpolate : true, depth : -19.0 
   });
+  // Initialize components for Routine "waiting_phase2"
+  waiting_phase2Clock = new util.Clock();
+  text_9 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_9',
+    text: '',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.2), 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: 0.0 
+  });
+  
+  text_10 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_10',
+    text: '',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.2), 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: -1.0 
+  });
+  
+  text_12 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_12',
+    text: '',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.2), 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: -2.0 
+  });
+  
+  text_13 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_13',
+    text: '',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.2), 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: -3.0 
+  });
+  
+  image_14 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_14', units : undefined, 
+    image : 'img/img_instruction/waiting_phase2a.png', mask : undefined,
+    ori : 0.0, pos : [0, 0.2], size : [1, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -4.0 
+  });
+  image_15 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_15', units : undefined, 
+    image : 'img/img_instruction/waiting_phase2b.png', mask : undefined,
+    ori : 0.0, pos : [0, (- 0.15)], size : [1.7, 0.68],
+    color : new util.Color([1, 1, 1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -5.0 
+  });
+  // Initialize components for Routine "waiting_phase_2next"
+  waiting_phase_2nextClock = new util.Clock();
+  image_13 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_13', units : undefined, 
+    image : 'img/img_instruction/waiting_phase2next.png', mask : undefined,
+    ori : 0.0, pos : [0, 0], size : [1, 0.3],
+    color : new util.Color([1, 1, 1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : 0.0 
+  });
+  key_resp_8 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "phase3intro"
   phase3introClock = new util.Clock();
   image_2 = new visual.ImageStim({
@@ -809,7 +926,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_practiceaxis1', units : undefined, 
     image : 'img/img_axis/ax27.png', mask : undefined,
-    ori : 0.0, pos : [(- 0.2), 0], size : [0.2, 0.7],
+    ori : 0.0, pos : [(- 0.2), 0], size : [0.2, 0.67],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -4.0 
@@ -818,7 +935,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_practiceaxis2', units : undefined, 
     image : 'img/img_axis/ax36.png', mask : undefined,
-    ori : 0.0, pos : [0.2, 0], size : [0.2, 0.7],
+    ori : 0.0, pos : [0.2, 0], size : [0.2, 0.67],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -5.0 
@@ -827,7 +944,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_11', units : undefined, 
     image : 'img/img_instruction/ph3_practiceinstr.png', mask : undefined,
-    ori : 0.0, pos : [0, 0.28], size : [1, 0.4],
+    ori : 0.0, pos : [0, 0.29], size : [0.8, 0.4],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -6.0 
@@ -866,7 +983,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_9', units : undefined, 
     image : 'img/img_instruction/ph3_formalinstr.png', mask : undefined,
-    ori : 0.0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0.0, pos : [0, 0], size : [1.2, 0.65],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -892,7 +1009,7 @@ async function experimentInit() {
     win : psychoJS.window,
     name : 'image_ph3Q', units : undefined, 
     image : 'img/img_instruction/ph3.png', mask : undefined,
-    ori : 0.0, pos : [0, 0.2], size : [1, 0.6],
+    ori : 0.0, pos : [0, 0.27], size : [0.9, 0.54],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -999,8 +1116,8 @@ async function experimentInit() {
   text_stop = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_stop',
-    text: 'thanks',
-    font: 'Open Sans',
+    text: '本实验到此结束，感谢参与！',
+    font: 'STSong',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
@@ -1042,10 +1159,9 @@ function introRoutineBegin(snapshot) {
     introComponents.push(image_nextbutton);
     introComponents.push(mouse_3);
     
-    introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of introComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1140,11 +1256,11 @@ function introRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of introComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -1160,11 +1276,11 @@ var _mouseXYs;
 function introRoutineEnd() {
   return async function () {
     //------Ending Routine 'intro'-------
-    introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of introComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('input_name.text',input_name.text)
     // store data for psychoJS.experiment (ExperimentHandler)
     _mouseXYs = mouse_3.getPos();
@@ -1202,15 +1318,14 @@ function trials_2LoopBegin(trials_2LoopScheduler, snapshot) {
     currentLoop = trials_2;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_2.forEach(function() {
+    for (const thisTrial_2 of trials_2) {
       const snapshot = trials_2.getSnapshot();
-    
       trials_2LoopScheduler.add(importConditions(snapshot));
       trials_2LoopScheduler.add(waiting_phaseRoutineBegin(snapshot));
       trials_2LoopScheduler.add(waiting_phaseRoutineEachFrame());
       trials_2LoopScheduler.add(waiting_phaseRoutineEnd());
       trials_2LoopScheduler.add(endLoopIteration(trials_2LoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1241,9 +1356,8 @@ function trials_horribleimgLoopBegin(trials_horribleimgLoopScheduler, snapshot) 
     currentLoop = trials_horribleimg;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_horribleimg.forEach(function() {
+    for (const thisTrials_horribleimg of trials_horribleimg) {
       const snapshot = trials_horribleimg.getSnapshot();
-    
       trials_horribleimgLoopScheduler.add(importConditions(snapshot));
       trials_horribleimgLoopScheduler.add(fixationRoutineBegin(snapshot));
       trials_horribleimgLoopScheduler.add(fixationRoutineEachFrame());
@@ -1252,7 +1366,7 @@ function trials_horribleimgLoopBegin(trials_horribleimgLoopScheduler, snapshot) 
       trials_horribleimgLoopScheduler.add(phase1RoutineEachFrame());
       trials_horribleimgLoopScheduler.add(phase1RoutineEnd());
       trials_horribleimgLoopScheduler.add(endLoopIteration(trials_horribleimgLoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1283,15 +1397,14 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
     currentLoop = trials;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials.forEach(function() {
+    for (const thisTrial of trials) {
       const snapshot = trials.getSnapshot();
-    
       trialsLoopScheduler.add(importConditions(snapshot));
       trialsLoopScheduler.add(Phase2RoutineBegin(snapshot));
       trialsLoopScheduler.add(Phase2RoutineEachFrame());
       trialsLoopScheduler.add(Phase2RoutineEnd());
       trialsLoopScheduler.add(endLoopIteration(trialsLoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1300,6 +1413,44 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
 
 async function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
+
+  return Scheduler.Event.NEXT;
+}
+
+
+var trials_5;
+function trials_5LoopBegin(trials_5LoopScheduler, snapshot) {
+  return async function() {
+    TrialHandler.fromSnapshot(snapshot); // update internal variables (.thisN etc) of the loop
+    
+    // set up handler to look after randomisation of conditions etc
+    trials_5 = new TrialHandler({
+      psychoJS: psychoJS,
+      nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+      extraInfo: expInfo, originPath: undefined,
+      trialList: 'cond/waiting_p2.xlsx',
+      seed: undefined, name: 'trials_5'
+    });
+    psychoJS.experiment.addLoop(trials_5); // add the loop to the experiment
+    currentLoop = trials_5;  // we're now the current loop
+    
+    // Schedule all the trials in the trialList:
+    for (const thisTrial_5 of trials_5) {
+      const snapshot = trials_5.getSnapshot();
+      trials_5LoopScheduler.add(importConditions(snapshot));
+      trials_5LoopScheduler.add(waiting_phase2RoutineBegin(snapshot));
+      trials_5LoopScheduler.add(waiting_phase2RoutineEachFrame());
+      trials_5LoopScheduler.add(waiting_phase2RoutineEnd());
+      trials_5LoopScheduler.add(endLoopIteration(trials_5LoopScheduler, snapshot));
+    }
+    
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+async function trials_5LoopEnd() {
+  psychoJS.experiment.removeLoop(trials_5);
 
   return Scheduler.Event.NEXT;
 }
@@ -1322,15 +1473,14 @@ function trials_3LoopBegin(trials_3LoopScheduler, snapshot) {
     currentLoop = trials_3;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_3.forEach(function() {
+    for (const thisTrial_3 of trials_3) {
       const snapshot = trials_3.getSnapshot();
-    
       trials_3LoopScheduler.add(importConditions(snapshot));
       trials_3LoopScheduler.add(phase3_practicecountdownRoutineBegin(snapshot));
       trials_3LoopScheduler.add(phase3_practicecountdownRoutineEachFrame());
       trials_3LoopScheduler.add(phase3_practicecountdownRoutineEnd());
       trials_3LoopScheduler.add(endLoopIteration(trials_3LoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1361,16 +1511,15 @@ function trials_ph3_2LoopBegin(trials_ph3_2LoopScheduler, snapshot) {
     currentLoop = trials_ph3_2;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_ph3_2.forEach(function() {
+    for (const thisTrials_ph3_2 of trials_ph3_2) {
       const snapshot = trials_ph3_2.getSnapshot();
-    
       trials_ph3_2LoopScheduler.add(importConditions(snapshot));
       const trials_ph3_1LoopScheduler = new Scheduler(psychoJS);
       trials_ph3_2LoopScheduler.add(trials_ph3_1LoopBegin(trials_ph3_1LoopScheduler, snapshot));
       trials_ph3_2LoopScheduler.add(trials_ph3_1LoopScheduler);
       trials_ph3_2LoopScheduler.add(trials_ph3_1LoopEnd);
       trials_ph3_2LoopScheduler.add(endLoopIteration(trials_ph3_2LoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1394,9 +1543,8 @@ function trials_ph3_1LoopBegin(trials_ph3_1LoopScheduler, snapshot) {
     currentLoop = trials_ph3_1;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_ph3_1.forEach(function() {
+    for (const thisTrials_ph3_1 of trials_ph3_1) {
       const snapshot = trials_ph3_1.getSnapshot();
-    
       trials_ph3_1LoopScheduler.add(importConditions(snapshot));
       trials_ph3_1LoopScheduler.add(fixation2RoutineBegin(snapshot));
       trials_ph3_1LoopScheduler.add(fixation2RoutineEachFrame());
@@ -1405,7 +1553,7 @@ function trials_ph3_1LoopBegin(trials_ph3_1LoopScheduler, snapshot) {
       trials_ph3_1LoopScheduler.add(phase3RoutineEachFrame());
       trials_ph3_1LoopScheduler.add(phase3RoutineEnd());
       trials_ph3_1LoopScheduler.add(endLoopIteration(trials_ph3_1LoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1443,15 +1591,14 @@ function trials_4LoopBegin(trials_4LoopScheduler, snapshot) {
     currentLoop = trials_4;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    trials_4.forEach(function() {
+    for (const thisTrial_4 of trials_4) {
       const snapshot = trials_4.getSnapshot();
-    
       trials_4LoopScheduler.add(importConditions(snapshot));
       trials_4LoopScheduler.add(countdownsecRoutineBegin(snapshot));
       trials_4LoopScheduler.add(countdownsecRoutineEachFrame());
       trials_4LoopScheduler.add(countdownsecRoutineEnd());
       trials_4LoopScheduler.add(endLoopIteration(trials_4LoopScheduler, snapshot));
-    });
+    }
     
     return Scheduler.Event.NEXT;
   }
@@ -1490,10 +1637,9 @@ function waiting_phaseRoutineBegin(snapshot) {
     waiting_phaseComponents.push(text_4);
     waiting_phaseComponents.push(text_5);
     
-    waiting_phaseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of waiting_phaseComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1602,11 +1748,11 @@ function waiting_phaseRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    waiting_phaseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of waiting_phaseComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -1621,11 +1767,11 @@ function waiting_phaseRoutineEachFrame() {
 function waiting_phaseRoutineEnd() {
   return async function () {
     //------Ending Routine 'waiting_phase'-------
-    waiting_phaseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of waiting_phaseComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -1651,10 +1797,9 @@ function phase1intro_2RoutineBegin(snapshot) {
     phase1intro_2Components.push(image_phase1intro);
     phase1intro_2Components.push(key_resp);
     
-    phase1intro_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1intro_2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1712,11 +1857,11 @@ function phase1intro_2RoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase1intro_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1intro_2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -1731,11 +1876,11 @@ function phase1intro_2RoutineEachFrame() {
 function phase1intro_2RoutineEnd() {
   return async function () {
     //------Ending Routine 'phase1intro_2'-------
-    phase1intro_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1intro_2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
     if (typeof key_resp.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
@@ -1767,10 +1912,9 @@ function fixationRoutineBegin(snapshot) {
     fixationComponents = [];
     fixationComponents.push(text_fixation);
     
-    fixationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of fixationComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1808,11 +1952,11 @@ function fixationRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    fixationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of fixationComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -1827,11 +1971,11 @@ function fixationRoutineEachFrame() {
 function fixationRoutineEnd() {
   return async function () {
     //------Ending Routine 'fixation'-------
-    fixationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of fixationComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -1863,10 +2007,9 @@ function phase1RoutineBegin(snapshot) {
     phase1Components.push(text_6);
     phase1Components.push(text_7);
     
-    phase1Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1983,11 +2126,11 @@ function phase1RoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase1Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2002,11 +2145,11 @@ function phase1RoutineEachFrame() {
 function phase1RoutineEnd() {
   return async function () {
     //------Ending Routine 'phase1'-------
-    phase1Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase1Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for psychoJS.experiment (ExperimentHandler)
     _mouseXYs = mouse_2.getPos();
     _mouseButtons = mouse_2.getPressed();
@@ -2048,10 +2191,9 @@ function phase2introRoutineBegin(snapshot) {
     phase2introComponents.push(key_resp_5);
     phase2introComponents.push(image_12);
     
-    phase2introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase2introComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2119,11 +2261,11 @@ function phase2introRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase2introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase2introComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2138,11 +2280,11 @@ function phase2introRoutineEachFrame() {
 function phase2introRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase2intro'-------
-    phase2introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase2introComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_5.keys', key_resp_5.keys);
     if (typeof key_resp_5.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_5.rt', key_resp_5.rt);
@@ -2361,6 +2503,7 @@ function Phase2RoutineBegin(snapshot) {
     text_personname.setText(person_name);
     // keep track of which components have finished
     Phase2Components = [];
+    Phase2Components.push(image_phase2instru);
     Phase2Components.push(image_ax1);
     Phase2Components.push(image_ax2);
     Phase2Components.push(image_ax3);
@@ -2380,10 +2523,9 @@ function Phase2RoutineBegin(snapshot) {
     Phase2Components.push(image_ph2axisnow3);
     Phase2Components.push(image_ph2axisnow4);
     
-    Phase2Components.forEach( function(thisComponent) {
+    for (const thisComponent of Phase2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2396,6 +2538,16 @@ function Phase2RoutineEachFrame() {
     t = Phase2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *image_phase2instru* updates
+    if (t >= 0.0 && image_phase2instru.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_phase2instru.tStart = t;  // (not accounting for frame time here)
+      image_phase2instru.frameNStart = frameN;  // exact frame index
+      
+      image_phase2instru.setAutoDraw(true);
+    }
+
     
     // *image_ax1* updates
     if (t >= 0.0 && image_ax1.status === PsychoJS.Status.NOT_STARTED) {
@@ -2663,11 +2815,11 @@ function Phase2RoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    Phase2Components.forEach( function(thisComponent) {
+    for (const thisComponent of Phase2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2687,11 +2839,11 @@ var list_temp4;
 function Phase2RoutineEnd() {
   return async function () {
     //------Ending Routine 'Phase2'-------
-    Phase2Components.forEach( function(thisComponent) {
+    for (const thisComponent of Phase2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     var _pj;
     function _pj_snippets(container) {
         function in_es6(left, right) {
@@ -2815,6 +2967,289 @@ function Phase2RoutineEnd() {
 }
 
 
+var waiting_phase2Components;
+function waiting_phase2RoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //------Prepare to start Routine 'waiting_phase2'-------
+    t = 0;
+    waiting_phase2Clock.reset(); // clock
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    routineTimer.add(4.500000);
+    // update component parameters for each repeat
+    text_9.setText(person_num1);
+    text_10.setText(person_num2);
+    text_12.setText(person_num3);
+    text_13.setText(person_num4);
+    // keep track of which components have finished
+    waiting_phase2Components = [];
+    waiting_phase2Components.push(text_9);
+    waiting_phase2Components.push(text_10);
+    waiting_phase2Components.push(text_12);
+    waiting_phase2Components.push(text_13);
+    waiting_phase2Components.push(image_14);
+    waiting_phase2Components.push(image_15);
+    
+    for (const thisComponent of waiting_phase2Components)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function waiting_phase2RoutineEachFrame() {
+  return async function () {
+    //------Loop for each frame of Routine 'waiting_phase2'-------
+    // get current time
+    t = waiting_phase2Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_9* updates
+    if (t >= 0.0 && text_9.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_9.tStart = t;  // (not accounting for frame time here)
+      text_9.frameNStart = frameN;  // exact frame index
+      
+      text_9.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_9.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_9.setAutoDraw(false);
+    }
+    
+    // *text_10* updates
+    if (t >= 1 && text_10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_10.tStart = t;  // (not accounting for frame time here)
+      text_10.frameNStart = frameN;  // exact frame index
+      
+      text_10.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_10.setAutoDraw(false);
+    }
+    
+    // *text_12* updates
+    if (t >= 2.5 && text_12.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_12.tStart = t;  // (not accounting for frame time here)
+      text_12.frameNStart = frameN;  // exact frame index
+      
+      text_12.setAutoDraw(true);
+    }
+
+    frameRemains = 2.5 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_12.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_12.setAutoDraw(false);
+    }
+    
+    // *text_13* updates
+    if (t >= 3 && text_13.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_13.tStart = t;  // (not accounting for frame time here)
+      text_13.frameNStart = frameN;  // exact frame index
+      
+      text_13.setAutoDraw(true);
+    }
+
+    frameRemains = 3 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_13.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_13.setAutoDraw(false);
+    }
+    
+    // *image_14* updates
+    if (t >= 0.0 && image_14.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_14.tStart = t;  // (not accounting for frame time here)
+      image_14.frameNStart = frameN;  // exact frame index
+      
+      image_14.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 4.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image_14.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image_14.setAutoDraw(false);
+    }
+    
+    // *image_15* updates
+    if (t >= 0.0 && image_15.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_15.tStart = t;  // (not accounting for frame time here)
+      image_15.frameNStart = frameN;  // exact frame index
+      
+      image_15.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 4.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image_15.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image_15.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of waiting_phase2Components)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function waiting_phase2RoutineEnd() {
+  return async function () {
+    //------Ending Routine 'waiting_phase2'-------
+    for (const thisComponent of waiting_phase2Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var _key_resp_8_allKeys;
+var waiting_phase_2nextComponents;
+function waiting_phase_2nextRoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //------Prepare to start Routine 'waiting_phase_2next'-------
+    t = 0;
+    waiting_phase_2nextClock.reset(); // clock
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // update component parameters for each repeat
+    key_resp_8.keys = undefined;
+    key_resp_8.rt = undefined;
+    _key_resp_8_allKeys = [];
+    // keep track of which components have finished
+    waiting_phase_2nextComponents = [];
+    waiting_phase_2nextComponents.push(image_13);
+    waiting_phase_2nextComponents.push(key_resp_8);
+    
+    for (const thisComponent of waiting_phase_2nextComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function waiting_phase_2nextRoutineEachFrame() {
+  return async function () {
+    //------Loop for each frame of Routine 'waiting_phase_2next'-------
+    // get current time
+    t = waiting_phase_2nextClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *image_13* updates
+    if (t >= 0.0 && image_13.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_13.tStart = t;  // (not accounting for frame time here)
+      image_13.frameNStart = frameN;  // exact frame index
+      
+      image_13.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_8* updates
+    if (t >= 0.0 && key_resp_8.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_8.tStart = t;  // (not accounting for frame time here)
+      key_resp_8.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_8.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_8.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_8.clearEvents(); });
+    }
+
+    if (key_resp_8.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_8.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_8_allKeys = _key_resp_8_allKeys.concat(theseKeys);
+      if (_key_resp_8_allKeys.length > 0) {
+        key_resp_8.keys = _key_resp_8_allKeys[_key_resp_8_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_8.rt = _key_resp_8_allKeys[_key_resp_8_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of waiting_phase_2nextComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function waiting_phase_2nextRoutineEnd() {
+  return async function () {
+    //------Ending Routine 'waiting_phase_2next'-------
+    for (const thisComponent of waiting_phase_2nextComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('key_resp_8.keys', key_resp_8.keys);
+    if (typeof key_resp_8.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('key_resp_8.rt', key_resp_8.rt);
+        routineTimer.reset();
+        }
+    
+    key_resp_8.stop();
+    // the Routine "waiting_phase_2next" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _key_resp_4_allKeys;
 var phase3introComponents;
 function phase3introRoutineBegin(snapshot) {
@@ -2835,10 +3270,9 @@ function phase3introRoutineBegin(snapshot) {
     phase3introComponents.push(image_2);
     phase3introComponents.push(key_resp_4);
     
-    phase3introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3introComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2896,11 +3330,11 @@ function phase3introRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3introComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2915,11 +3349,11 @@ function phase3introRoutineEachFrame() {
 function phase3introRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3intro'-------
-    phase3introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3introComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_4.keys', key_resp_4.keys);
     if (typeof key_resp_4.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_4.rt', key_resp_4.rt);
@@ -2958,10 +3392,9 @@ function phase3_practicechoiceRoutineBegin(snapshot) {
     phase3_practicechoiceComponents.push(image_practiceaxis2);
     phase3_practicechoiceComponents.push(image_11);
     
-    phase3_practicechoiceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicechoiceComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3064,11 +3497,11 @@ function phase3_practicechoiceRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3_practicechoiceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicechoiceComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3083,11 +3516,11 @@ function phase3_practicechoiceRoutineEachFrame() {
 function phase3_practicechoiceRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3_practicechoice'-------
-    phase3_practicechoiceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicechoiceComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for psychoJS.experiment (ExperimentHandler)
     _mouseXYs = mouse_5.getPos();
     _mouseButtons = mouse_5.getPressed();
@@ -3131,10 +3564,9 @@ function phase3_practicecountdownRoutineBegin(snapshot) {
     phase3_practicecountdownComponents = [];
     phase3_practicecountdownComponents.push(text_8);
     
-    phase3_practicecountdownComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicecountdownComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3172,11 +3604,11 @@ function phase3_practicecountdownRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3_practicecountdownComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicecountdownComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -3191,11 +3623,11 @@ function phase3_practicecountdownRoutineEachFrame() {
 function phase3_practicecountdownRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3_practicecountdown'-------
-    phase3_practicecountdownComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicecountdownComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     time_show -= 1;
     
     return Scheduler.Event.NEXT;
@@ -3219,10 +3651,9 @@ function phase3_practicepicRoutineBegin(snapshot) {
     phase3_practicepicComponents = [];
     phase3_practicepicComponents.push(image_10);
     
-    phase3_practicepicComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicepicComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3260,11 +3691,11 @@ function phase3_practicepicRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3_practicepicComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicepicComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -3279,11 +3710,11 @@ function phase3_practicepicRoutineEachFrame() {
 function phase3_practicepicRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3_practicepic'-------
-    phase3_practicepicComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_practicepicComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -3309,10 +3740,9 @@ function phase3_formalinstrRoutineBegin(snapshot) {
     phase3_formalinstrComponents.push(key_resp_7);
     phase3_formalinstrComponents.push(image_9);
     
-    phase3_formalinstrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_formalinstrComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3370,11 +3800,11 @@ function phase3_formalinstrRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3_formalinstrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_formalinstrComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3389,11 +3819,11 @@ function phase3_formalinstrRoutineEachFrame() {
 function phase3_formalinstrRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3_formalinstr'-------
-    phase3_formalinstrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase3_formalinstrComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_7.keys', key_resp_7.keys);
     if (typeof key_resp_7.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_7.rt', key_resp_7.rt);
@@ -3425,10 +3855,9 @@ function fixation2RoutineBegin(snapshot) {
     fixation2Components = [];
     fixation2Components.push(text_fixation2);
     
-    fixation2Components.forEach( function(thisComponent) {
+    for (const thisComponent of fixation2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3466,11 +3895,11 @@ function fixation2RoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    fixation2Components.forEach( function(thisComponent) {
+    for (const thisComponent of fixation2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -3485,11 +3914,11 @@ function fixation2RoutineEachFrame() {
 function fixation2RoutineEnd() {
   return async function () {
     //------Ending Routine 'fixation2'-------
-    fixation2Components.forEach( function(thisComponent) {
+    for (const thisComponent of fixation2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -3535,10 +3964,9 @@ function phase3RoutineBegin(snapshot) {
     phase3Components.push(image_ph3axisnow2);
     phase3Components.push(image_ph3axisnow1);
     
-    phase3Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase3Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3661,11 +4089,11 @@ function phase3RoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase3Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase3Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3680,11 +4108,11 @@ function phase3RoutineEachFrame() {
 function phase3RoutineEnd() {
   return async function () {
     //------Ending Routine 'phase3'-------
-    phase3Components.forEach( function(thisComponent) {
+    for (const thisComponent of phase3Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     if ((count_num >= 1)) {
         trials_ph3_1.finished = true;
     }
@@ -3727,10 +4155,9 @@ function phase4introRoutineBegin(snapshot) {
     phase4introComponents.push(image_4);
     phase4introComponents.push(key_resp_6);
     
-    phase4introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase4introComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3788,11 +4215,11 @@ function phase4introRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    phase4introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase4introComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3807,11 +4234,11 @@ function phase4introRoutineEachFrame() {
 function phase4introRoutineEnd() {
   return async function () {
     //------Ending Routine 'phase4intro'-------
-    phase4introComponents.forEach( function(thisComponent) {
+    for (const thisComponent of phase4introComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_6.keys', key_resp_6.keys);
     if (typeof key_resp_6.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_6.rt', key_resp_6.rt);
@@ -3846,10 +4273,9 @@ function countdownsecRoutineBegin(snapshot) {
     countdownsecComponents = [];
     countdownsecComponents.push(text_11);
     
-    countdownsecComponents.forEach( function(thisComponent) {
+    for (const thisComponent of countdownsecComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3887,11 +4313,11 @@ function countdownsecRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    countdownsecComponents.forEach( function(thisComponent) {
+    for (const thisComponent of countdownsecComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -3906,11 +4332,11 @@ function countdownsecRoutineEachFrame() {
 function countdownsecRoutineEnd() {
   return async function () {
     //------Ending Routine 'countdownsec'-------
-    countdownsecComponents.forEach( function(thisComponent) {
+    for (const thisComponent of countdownsecComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     countdown_time -= 1;
     
     return Scheduler.Event.NEXT;
@@ -3934,10 +4360,9 @@ function ph4threat_imageRoutineBegin(snapshot) {
     ph4threat_imageComponents = [];
     ph4threat_imageComponents.push(image_5);
     
-    ph4threat_imageComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ph4threat_imageComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3975,11 +4400,11 @@ function ph4threat_imageRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    ph4threat_imageComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ph4threat_imageComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -3994,11 +4419,11 @@ function ph4threat_imageRoutineEachFrame() {
 function ph4threat_imageRoutineEnd() {
   return async function () {
     //------Ending Routine 'ph4threat_image'-------
-    ph4threat_imageComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ph4threat_imageComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -4020,10 +4445,9 @@ function stopRoutineBegin(snapshot) {
     stopComponents = [];
     stopComponents.push(text_stop);
     
-    stopComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stopComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4061,11 +4485,11 @@ function stopRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    stopComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stopComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -4080,11 +4504,11 @@ function stopRoutineEachFrame() {
 function stopRoutineEnd() {
   return async function () {
     //------Ending Routine 'stop'-------
-    stopComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stopComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
